@@ -1,0 +1,76 @@
+h1 {
+    color: red;
+    font-size: 60px;
+    text-align: center;
+}
+
+.centreline {
+    height:60vh;
+    width:48%;
+    border-right: 5px red dotted;
+    position: absolute;
+}
+
+.box {
+    background-color: red;
+    height: 100px;
+    width:100px;
+    left: 80%;
+    top: 20%;
+    border-radius:50%;
+    position: absolute;
+    animation: movingbox 5s infinite;
+}
+
+.rectangle {
+    background-color: red;
+    height: 200px;
+    width: 50px;
+    left: 80%;
+    top: 20%;
+    position: absolute;
+    
+}
+
+.right{
+    left: 87%;
+    top: 20%;
+    animation: rectangler 5s infinite;
+}
+
+.left {
+    left: 16%;
+    top: 20%;
+    animation: rectanglel 5s infinite;
+}
+
+@keyframes movingbox {
+    0%    { left: 80%; transform: skew( 10deg, 10deg); }
+    1%    { transform: skew( 0deg, 0deg ); }
+    25%   { left: 20%; top: 50%; transform: skew( 0deg, 0deg ); }
+    26%   { transform: skew( 10deg, 10deg); }
+    30%   { transform: skew( 0deg, 0deg ); }
+    48%   { transform: skew( 10deg, 10deg); }
+    49%   { transform: skew( 0deg, 0deg ); }
+    50%   { left: 80%; top: 80%; }
+    75%   { left: 20%; top: 50%; }
+    
+    76%   { transform: skew( 10deg, 10deg); }
+    77%   { transform: skew( 0deg, 0deg ); }
+    100%  { left: 80%; }
+    
+}
+
+@keyframes rectanglel {
+    0%   { top: 20%; }
+    25%  { top: 50%; }
+    50%  { top: 50%; }
+    100% { top: 20%; }
+}
+
+@keyframes rectangler {
+    0%   { top: 20%; }
+    /*25%  { top: 80%; }*/
+    50%  { top: 80%; }
+    100% { top: 20%; }
+}
